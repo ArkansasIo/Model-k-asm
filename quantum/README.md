@@ -1,10 +1,13 @@
-# Model K Quantum Assembly
+# Model QK Quantum Subsystem
 
-Optional quantum coprocessor/programming subsystem. The classical CPU and magnetic-core memory remain classical; QASM/QISA commands are submitted to a simulator or quantum backend.
+The quantum subsystem is a software-defined research layer for Model QK. It separates classical control, QISA, circuit generation, compilation, scheduling, virtual hardware, simulation, and future physical backends.
 
-Subsystems: QISA, QASM assembly, algorithms, circuits, simulator, RTL interface, equations, tests.
+Architecture: Application -> Procedural Generator -> OpenQASM/QISA -> Compiler -> Scheduler -> Backend -> Results
 
+Backends include QK-VQPU virtual hardware, exact state-vector simulation, and future superconducting, trapped-ion, neutral-atom, and photonic adapters.
 
-## Expanded examples
+The virtual hardware is software-only. It models topology, gate/readout error, seeded execution, and capability metadata; it does not claim physical device measurements.
 
-Additional research notes and examples are in `docs/RESEARCH_NOTES.md`, `docs/QISA_PROGRAMMING_GUIDE.md`, and `docs/ALGORITHM_CATALOG.md`. New QISA sketches cover Grover search, teleportation, phase estimation, and a VQE parameter sweep. OpenQASM 3 circuit examples are provided separately under `circuits/`. QISA-specific instructions are project-defined and require a compatible assembler/backend; they are not directly executable on arbitrary quantum hardware.
+Current applications: quantum/apps/procedural_generator.py and quantum/apps/virtual_hardware.py.
+
+Verification uses Python unittest discovery from the repository root. Physical-device claims require separate laboratory measurements.
