@@ -1,0 +1,13 @@
+[PATCH]
+format_version=1
+patch_id=MK-2026-001
+source_version=1.0.0
+target_version=1.1.0
+architecture=MODEL-K
+rollback_available=true
+dependencies=BASE-1.0
+
+[FILES]
+database/binary/MKTB_FORMAT.md=MODIFY
+quantum/isa/model_k_qisa.md=MODIFY
+docs/math/MASTER_EQUATIONS.md=MODIFY
