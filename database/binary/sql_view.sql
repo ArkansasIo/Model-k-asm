@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS model_k_binary_records (
+    record_id BIGINT UNSIGNED NOT NULL PRIMARY KEY,
+    record_type TINYINT UNSIGNED NOT NULL,
+    flags TINYINT UNSIGNED NOT NULL,
+    record_version TINYINT UNSIGNED NOT NULL,
+    status TINYINT UNSIGNED NOT NULL,
+    value20 INT UNSIGNED NOT NULL,
+    payload BINARY(8) NOT NULL,
+    checksum TINYINT UNSIGNED NOT NULL,
+    CHECK (value20 <= 1048575)
+);
