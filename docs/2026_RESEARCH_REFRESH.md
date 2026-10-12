@@ -2,7 +2,7 @@
 
 **Research snapshot:** 11 October 2026  
 **Scope:** Classical architecture, memory, records, storage interfaces, hardware roadmap.  
-**Quantum scope:** The existing `quantum/` tree is intentionally unchanged by this refresh.
+**Quantum scope:** The quantum tree is included as a separate software/hardware-interface research layer; it remains decoupled from the classical memory and CPU specifications.
 
 ## Executive summary
 
@@ -45,3 +45,8 @@ Research references establish the state of the field; they do not mean the corre
 ## Required engineering work still outstanding
 
 This document is a research refresh and migration policy. It does not certify that every legacy ASM routine, RTL module, or C implementation has been converted to 64-bit. Each implementation must be changed and tested against the v2 specification before it is labelled 64-bit compatible.
+
+
+## Quantum architecture refresh
+
+Model QK now treats quantum execution as a layered subsystem: procedural application generation, OpenQASM/QISA representation, compiler, topology mapping, scheduler, backend contract, virtual hardware, state-vector simulation, and future physical platform adapters. The reference virtual device is QK-VQPU. Virtual results are software-model results and must not be presented as laboratory measurements.
