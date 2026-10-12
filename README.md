@@ -1,17 +1,21 @@
 # Model K — 8-bit Assembly and Unified Circuit Design
 
-This repository contains the Model K reference implementation package: an 8-bit datapath, K2 two-bit adder, logic gate primitives, ALU, CPU/register/control design, 20-byte record memory, assembly algorithm examples, equations, circuit documentation, and a SystemVerilog testbench.
+Model K is an educational 8-bit computer reference design built from Boolean gates, a K2 two-bit adder, an 8-bit ALU, registers, a compact CPU, and byte-addressed 20-byte records.
 
-## Package
+## Source tree
 
-Download `model-k-unified-circuit.zip` from this repository and extract it to obtain the complete source tree (`rtl/`, `asm/`, `tb/`, `docs/`, and `Makefile`).
+- `rtl/` — SystemVerilog gate primitives, adders, ALU, registers, record memory, CPU, and top-level module
+- `asm/model_k.asm` — reference pseudo-assembly algorithms
+- `tb/model_k_tb.sv` — K2 adder testbench
+- `docs/` — architecture, circuit equations, gate truth tables, record layout, ALU, datapath, memory, verification, and synthesis notes
+- `Makefile` — Icarus Verilog test target
 
-## Quick test
+## Run the test
 
-With Icarus Verilog installed, run:
+Install Icarus Verilog, then run:
 
 ```sh
 make test
 ```
 
-This is an educational RTL reference design; verify and adapt the CPU instruction/control semantics before treating it as production silicon or a finished FPGA implementation.
+The assembly file documents the intended instruction style; it is pseudo-assembly, not yet a machine-code assembler. Review and simulate the RTL before treating it as a finished FPGA or production hardware design.
