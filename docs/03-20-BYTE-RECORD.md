@@ -1,4 +1,6 @@
-# Model K 20-Byte Record
+# Model K v1 — Legacy 20-Byte Computation Record
+
+**Status:** Legacy compatibility schema. Do not use as the Aethernox v2 record.
 
 | Offset | Field | Size |
 |---:|---|---:|
@@ -24,3 +26,5 @@
 | 19 | END_MARKER | 1 |
 
 Total: 20 bytes = 160 bits.
+
+This computation-oriented layout differs from the generic database record documented in `database/README.md`. Assign a schema identifier before any automated migration. The proposed Aethernox v2 64-byte record is defined in `database/RECORD_FORMAT_V2.md`.
