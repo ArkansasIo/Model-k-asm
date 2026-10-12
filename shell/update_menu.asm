@@ -1,0 +1,20 @@
+; MKDOS Update/Patch menu
+MENU_UPDATE:
+    PRINT "7.5 UPDATE"
+    PRINT "  7.5.1 CHECK"
+    PRINT "  7.5.2 LIST"
+    PRINT "  7.5.3 INFO"
+    PRINT "  7.5.4 VERIFY"
+    PRINT "  7.5.5 INSTALL"
+    PRINT "  7.5.6 STATUS"
+    PRINT "  7.5.7 HISTORY"
+
+MENU_PATCH:
+    PRINT "7.6 PATCH"
+    PRINT "  7.6.1 CREATE"
+    PRINT "  7.6.2 VERIFY"
+    PRINT "  7.6.3 DRYRUN"
+    PRINT "  7.6.4 APPLY"
+    PRINT "  7.6.5 DIFF"
+    PRINT "  7.6.6 ROLLBACK"
+    RET
