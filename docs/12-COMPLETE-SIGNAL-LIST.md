@@ -1,0 +1,13 @@
+# Model K Signal List
+
+Clock/reset: CLK, RESET
+
+CPU: PC[7:0], INSTRUCTION[15:0], OPCODE[3:0], RD[3:0], RS[3:0], FN[3:0]
+
+Register file: R0[7:0] through R7[7:0]
+
+ALU: ALU_A[7:0], ALU_B[7:0], ALU_OP[3:0], ALU_Y[7:0], CARRY, ZERO, NEGATIVE, OVERFLOW
+
+Memory: MEM_WE, MEM_ADDR[15:0], MEM_WDATA[7:0], MEM_RDATA[7:0]
+
+Record: RECORD_ID[7:0], RECORD_OFFSET[4:0], RECORD_BASE[15:0], CHECKSUM[7:0], END_MARKER[7:0]
