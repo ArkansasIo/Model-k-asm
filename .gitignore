@@ -1,0 +1,3 @@
+# Model QK generated build artifacts
+output/ex/*
+!output/ex/README.md
