@@ -6,6 +6,10 @@
 
 This repository is an educational experimental computer architecture. **Model K v1 (legacy)** is the legacy 8-bit reference design built from Boolean gates, a K2 two-bit adder, an 8-bit ALU, registers, control logic, assembly routines, and legacy fixed-size records. **Aethernox v2** is the proposed evolution toward 64-bit logical values and a modern, backend-neutral memory hierarchy.
 
+## Current quantum architecture
+
+The quantum subsystem is now a first-class research layer rather than a single QISA boundary. The supported software path is **application → procedural generator → OpenQASM/QISA → compiler → scheduler → backend → results**. `QK-VQPU` is the reference virtual hardware target; the exact state-vector simulator remains available for ideal verification. Physical platform adapters for superconducting, trapped-ion, neutral-atom, and photonic systems are research interfaces and do not imply that this repository contains a physical quantum processor.
+
 ## Version boundaries
 
 - **Model K v1 (legacy):** 8-bit datapath, legacy 20-bit logical operations and existing 20-byte record schemas.
