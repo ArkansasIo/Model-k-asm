@@ -1,0 +1,16 @@
+# MKDOS Update Commands
+
+UPDATE CHECK
+UPDATE LIST
+UPDATE INFO <patch-id>
+UPDATE VERIFY <patch-id>
+UPDATE INSTALL <patch-id>
+UPDATE STATUS
+UPDATE HISTORY
+
+PATCH CREATE <source> <target>
+PATCH VERIFY <file>
+PATCH APPLY <patch>
+PATCH DRYRUN <patch>
+PATCH ROLLBACK <patch>
+PATCH DIFF <patch>
