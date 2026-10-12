@@ -1,13 +1,14 @@
-# Aethernox Paradox Core — Model K Reference Architecture
+# Model QK — Aethernox Paradox Core Reference Architecture
 
 **Research snapshot:** 11 October 2026  
+**Project name:** Model QK  
 **Tagline:** *Two realms, one core.*
 
-This repository is an educational experimental computer architecture. **Model K v1** is the legacy 8-bit reference design built from Boolean gates, a K2 two-bit adder, an 8-bit ALU, registers, control logic, assembly routines, and legacy fixed-size records. **Aethernox v2** is the proposed evolution toward 64-bit logical values and a modern, backend-neutral memory hierarchy.
+This repository is an educational experimental computer architecture. **Model K v1 (legacy)** is the legacy 8-bit reference design built from Boolean gates, a K2 two-bit adder, an 8-bit ALU, registers, control logic, assembly routines, and legacy fixed-size records. **Aethernox v2** is the proposed evolution toward 64-bit logical values and a modern, backend-neutral memory hierarchy.
 
 ## Version boundaries
 
-- **Model K v1:** 8-bit datapath, legacy 20-bit logical operations and existing 20-byte record schemas.
+- **Model K v1 (legacy):** 8-bit datapath, legacy 20-bit logical operations and existing 20-byte record schemas.
 - **Aethernox v2:** proposed 64-bit logical data and 64-byte records, with explicit schema versioning.
 - **Native 64-bit CPU:** optional future hardware design; not implied by 64-bit logical values on an 8-bit CPU.
 - **Memory:** SRAM/FPGA block RAM for initial prototype; DRAM where platform-supported; NVMe/NAND for persistent bulk storage; optional MRAM study; ferrite magnetic-core memory as a separate historical laboratory experiment.
@@ -76,3 +77,8 @@ See `update/` for patch manifests, SHA-256 integrity rules, dependency resolutio
 ## Implementation status
 
 The 2026 research and v2 specifications are design documents. This commit does not claim that every legacy ASM routine, RTL module, C implementation, or test has been converted to v2. Implementation status must be tracked per module and confirmed by builds and tests.
+
+
+## Project rename
+
+The current project name is **Model QK**. Legacy `model_k`, `mk_`, and `MK` source identifiers remain compatibility namespaces until an explicit ABI/RTL migration is completed. See `docs/MODEL_QK_RENAME.md` and `docs/PROJECT_IDENTITY.md`.
